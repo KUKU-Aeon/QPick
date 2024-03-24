@@ -9,6 +9,7 @@ import CartPage from "./pages/CartPage";
 function App() {
   return (
       <Router>
+       
         <Header />
         <Routes>
             <Route path="/" element={<HomePage/>}>
@@ -21,6 +22,7 @@ function App() {
 
         </Routes>
           <Footer/>
+     <HashRouter/>
       </Router>
   );
 }
