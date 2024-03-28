@@ -8,7 +8,7 @@ import CartPage from "./pages/CartPage";
 
 function App() {
   return (
-          <Router basename="/">
+          <Router basename={process.env.PUBLIC_URL}>
         <Header />
         <Routes>
             <Route path="/" element={<HomePage/>}>
