@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+import { HashRouter,BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import Header from '../src/Components/Header'
 import Footer from '../src/Components/Footer'
 import HomePage from "./pages/HomePage";
@@ -9,6 +9,7 @@ import CartPage from "./pages/CartPage";
 function App() {
   return (
       <Router>
+          <HashRouter basename="/">
         <Header />
         <Routes>
             <Route path="/" element={<HomePage/>}>
@@ -21,6 +22,7 @@ function App() {
 
         </Routes>
           <Footer/>
+          </HashRouter>
       </Router>
   );
 }
